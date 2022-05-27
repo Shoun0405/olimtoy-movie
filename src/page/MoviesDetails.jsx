@@ -64,15 +64,22 @@ const MoviesDetails = () => {
               </div>
               </div>
               <hr />
-              <div className="d-flex align-items-center">
+              <div className="d-flex align-items-center mb-4">
               <img className='posterImg'
-              src={`${imgPath}w1280${moviesDetails?.poster_path}`} alt="" />
+              src={`${imgPath}w1280${moviesDetails?.poster_path}`} alt="" />{
+                actors ? null
+                :
               <Actors actors={actors}/>
+              }
               </div>
-              <Link className='text-decoration-none btn btn-primary '
+              <Link className='text-decoration-none btn btn-primary me-4'
               onClick={() => goBackHandler()}
                to={'/'}>
-                 Go Back</Link>
+                 Go Home</Link>
+              <Link className='text-decoration-none btn btn-success '
+              onClick={() => goBackHandler()}
+               to={'/search'}>
+                 Go Search</Link>
               </div>
             )}
               <Footer/>

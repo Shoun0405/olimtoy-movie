@@ -167,7 +167,6 @@ export const searchMovies = createAsyncThunk(
             const {data} = await axios.get(`${searchUrl}?${api_key}&query=${nameAndPage}&include_adult=false`)
             // &page=${!page ? 1 : page }
 
-            console.log(data)
             return data
         } catch (error) {
             if (!error.response) {

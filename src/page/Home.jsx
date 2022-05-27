@@ -43,10 +43,10 @@ const Home = () => {
       <Navbar/>  
 
     {loading ?
-    <h1 className='text-light'>Loading ......</h1>:
+    <h1 className='text-light min-vh-100'>Loading ......</h1>:
     appErr || serverErr ?
     
-    <h1 className='text-light'>{serverErr} {appErr}</h1>
+    <h1 className='text-light  min-vh-100'>{serverErr} {appErr}</h1>
     :
       <div className="container">        
       <HeaderCarousel movies={popular}/>
