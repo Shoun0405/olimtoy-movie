@@ -41,7 +41,7 @@ const SearchedMovies = () => {
             </form>
         <div className="d-flex  flex-wrap justify-content-center pt-3">
         {
-            resultsLength === 0 || !searchMovie ?
+            resultsLength === 0 ?
             
             <h1 className='text-light mt-5'>
             Nothing not Founded
