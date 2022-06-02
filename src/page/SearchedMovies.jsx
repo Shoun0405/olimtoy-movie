@@ -41,12 +41,6 @@ const SearchedMovies = () => {
             </form>
         <div className="d-flex  flex-wrap justify-content-center pt-3">
         {
-            resultsLength === 0 ?
-            
-            <h1 className='text-light mt-5'>
-            Nothing not Founded
-            </h1>                
-        :
          searchMovie.map(searched => (
                 <Link to={`/${searched.id}`}
                 key={searched.id} 
