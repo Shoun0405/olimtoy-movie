@@ -158,13 +158,13 @@ export const actorsOfMovies = createAsyncThunk(
 
 export const searchMovies = createAsyncThunk(
     'movies/search',
-    async (nameAndPage, {rejectWithValue, getState, dispatch}) => {
+    async (movieName, {rejectWithValue, getState, dispatch}) => {
         
 
         
         try {
             // const {nameMovie} = nameAndPage
-            const {data} = await axios.get(`${searchUrl}?${api_key}&query=${nameAndPage}&include_adult=false`)
+            const {data} = await axios.get(`${searchUrl}?${api_key}&query=${movieName}`)
             // &page=${!page ? 1 : page }
 
             return data
